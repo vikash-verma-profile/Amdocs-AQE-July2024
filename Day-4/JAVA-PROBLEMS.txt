@@ -8,6 +8,7 @@ Input
 Juan
 Sara
 Carlos
+
 Output
 Hello! My name is Juan
 Hello! My name is Sara
