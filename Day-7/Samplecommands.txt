@@ -1,0 +1,79 @@
+By ID: Finds an element by its unique ID.
+
+driver.findElement(By.id("elementId"));
+
+By Name: Finds an element by its name attribute.
+
+driver.findElement(By.name("elementName"));
+
+By Class Name: Finds an element by its class attribute.
+
+driver.findElement(By.className("className"));
+
+By Tag Name: Finds elements by their tag name.
+
+driver.findElements(By.tagName("a"));
+
+By Link Text: Finds a link by its exact text.
+
+driver.findElement(By.linkText("Link Text Here"));
+
+By Partial Link Text: Finds a link by a part of its text.
+
+driver.findElement(By.partialLinkText("Partial Link Text"));
+
+By XPath: Finds an element using XPath expressions.
+
+driver.findElement(By.xpath("//tagname[@attribute='value']"));
+
+By CSS Selector: Finds an element by its CSS selector.
+
+driver.findElement(By.cssSelector("tagname.class#id"));
+
+
+
+1. Basic Browser Operations
+To initialize the Chrome WebDriver: WebDriver driver = new ChromeDriver();
+
+To load a specific web page: driver.get("https://www.example.com");
+
+To maximize the browser window: driver.manage().window().maximize();
+
+To close the current browser window: driver.close();
+
+To close all browser windows associated with that driver session: driver.quit();
+
+2. Navigational Commands
+For refreshing the current page: driver.navigate().refresh();
+
+To navigate backward in the browser's history: driver.navigate().back();
+
+To navigate forward in the browser's history: driver.navigate().forward();
+
+3. Web Element Interaction
+To locate an element by its ID: WebElement element = driver.findElement(By.id("elementId"));
+
+To click on a web element: element.click();
+
+To input text into an input field: element.sendKeys("Text Here");
+
+To clear content from an input field: element.clear();
+
+To retrieve text from a web element: String text = element.getText();
+
+4. Selenium WebDriver Waits
+For implicit waiting (waits for elements to become available up to a set time): 
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+For explicit waiting (waits for a specific condition up to a set time):
+WebDriverWait wait = new WebDriverWait(driver, 10);
+wait.until(ExpectedConditions.visibilityOf(element));
+
+5. Advanced Interactions
+To switch to an alert window: Alert alert = driver.switchTo().alert();
+
+To switch to a specific frame by name or ID: driver.switchTo().frame("frameNameOrId");
+
+To execute JavaScript on the loaded web page:
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript("javascriptCodeHere");
