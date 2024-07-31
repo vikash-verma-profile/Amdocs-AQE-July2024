@@ -1,0 +1,6 @@
+moveToElement(webElement)===> Mouse hover
+contextclick()==>right click on page
+contextclick(webElement)==right click on specific element
+sendKeys(KEYS.TAB)==> for keyboard events
+clickAndHold(webElement)==> click on element and hold until next operation
+release()===> release current control
