@@ -1,0 +1,1 @@
+scp -i "amdocs-connect.pem" index.html ec2-user@ec2-52-193-130-138.ap-northeast-1.compute.amazonaws.com:~/ .
